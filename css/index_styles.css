@@ -1,0 +1,63 @@
+/* Autentikációs oldal sötét stílusai */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1f20; /* Sötét háttér */
+    color: #ffffff; /* Fehér szöveg */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#auth-container {
+    width: 100%;
+    max-width: 600px; /* Növeltük a szélességet, hogy elférjenek egymás mellett az elemek */
+    margin: auto;
+    padding: 20px;
+    background-color: #0e0e0e; /* Sötétebb szürke a háttérhez képest */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Sötétebb árnyék */
+    border-radius: 10px;
+    text-align: center;
+    display: flex; /* Flexbox az elrendezéshez */
+    justify-content: space-between; /* Két elem között egyenletes távolság */
+    align-items: center; /* Függőlegesen középre igazítva */
+}
+
+#auth-text {
+    flex: 1; /* Az arányos méretezés biztosítása */
+    text-align: left; /* Balra igazítás */
+    padding-right: 20px; /* Térköz a szöveg és a beviteli mezők között */
+}
+
+.form-box {
+    flex: 2; /* Az arányos méretezés biztosítása a beviteli mezőkhöz */
+    display: flex;
+    flex-direction: column; /* A beviteli mezők egymás alá rendezése */
+}
+
+button {
+    background-color: #3c4043; /* Sötét gombszín */
+    color: #e8eaed; /* Világos szöveg */
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5f6368; /* Világosabb árnyalat hover esetén */
+}
+
+input[type="text"], input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #2b2b2b; /* Sötét beviteli mező */
+    color: #e8eaed; /* Fehér szöveg a beviteli mezőben */
+    border: 1px solid #444; /* Halványabb szegély a sötét stílushoz */
+    border-radius: 5px;
+}

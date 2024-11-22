@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    color: #555;
+    text-align: center;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+ul li {
+    background-color: #ffffff;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Üdvözlő oldal stílusai, átalakítva a ChatGPT stílusához hasonlóan */
+
+/* A teljes oldal háttérszíne és elrendezése */
+body.welcome-page {
+    background-color: #343541; /* Sötét háttér, amely illeszkedik a ChatGPT stílusához */
+    display: flex; /* Rugalmas elrendezés a középre igazításhoz */
+    flex-direction: column; /* Az elemek elrendezése függőlegesen */
+    align-items: center; /* Az elemek vízszintes középre igazítása */
+    min-height: 100vh; /* A teljes képernyő magassága */
+    gap: 20px; /* Az elemek közötti távolság */
+    padding: 20px; /* További belső tér az oldal széleitől */
+    box-sizing: border-box; /* A padding beszámítása a teljes méretbe */
+    color: #e1e1e1; /* Világos szöveg a sötét háttérhez */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern betűtípus a jobb olvashatóságért */
+}
+
+/* Fejléc stílusai, ahol a kijelentkezés gomb található */
+header {
+    position: fixed; /* Fix pozíció a képernyő jobb felső sarkában */
+    top: 10px; /* Távolság a felső széltől */
+    right: 20px; /* Távolság a jobb széltől */
+    z-index: 1000; /* Biztosítja, hogy a fejléc mindig előtérben legyen */
+}
+
+/* Az üdvözlő szöveg megjelenítése egy "szigeten" */
+.welcome-container {
+    background-color: #444654; /* Sötétebb szín az üdvözlő szöveg számára, hasonló a ChatGPT paneleihez */
+    padding: 30px; /* Belső tér az elem széleitől */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Mélyebb árnyék a sziget hatás érdekében */
+    border-radius: 10px; /* Lekerekített sarkok, kevésbé hangsúlyosak */
+    text-align: center; /* Szöveg középre igazítása */
+    width: 100%; /* Szélesség az oldalhoz viszonyítva */
+    max-width: 600px; /* Maximális szélesség */
+    margin: 100px auto 0 auto; /* Távolság a kijelentkezés gomb alatt és középre igazítás */
+    box-sizing: border-box;
+}
+
+/* A gombokat tartalmazó sziget stílusai */
+.exercise-buttons-container {
+    background-color: #444654; /* Sötét szín a gombok hátteréhez is, a ChatGPT stílusához illeszkedve */
+    padding: 20px; /* Belső tér az elem széleitől */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Árnyék a sziget hatás érdekében */
+    border-radius: 10px; /* Lekerekített sarkok */
+    text-align: center; /* Szöveg középre igazítása */
+    width: 100%; /* Szélesség az oldalhoz viszonyítva */
+    max-width: 1200px; /* Maximális szélesség */
+    display: grid; /* Grid elrendezés a gombokhoz */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* A gombok száma és mérete a képernyő méretétől függ, akár egy gomb is egymás alatt */
+    gap: 15px; /* A gombok közötti távolság */
+    margin: 40px auto; /* Távolság az üdvözlő szövegtől és középre igazítás */
+    box-sizing: border-box; /* A padding beszámítása a teljes méretbe */
+}
+
+/* A gombok stílusai */
+.exercise-buttons-container button {
+    height: 120px; /* Négyzet alakú gombok */
+    background-color: #1e90ff; /* Világosabb kék szín, amely kiemelkedik a sötét háttérből */
+    color: white; /* Fehér szöveg */
+    border: none; /* Nincs keret */
+    cursor: pointer; /* Mutatóváltás az egérrel való rámutatáskor */
+    border-radius: 5px; /* Lekerekített sarkok */
+    transition: background-color 0.3s, transform 0.2s; /* Lassan változó háttérszín és kis nagyítás az interakció során */
+    font-size: 1rem; /* Alapértelmezett betűméret */
+    box-sizing: border-box; /* Padding beleszámítása a méretbe */
+    width: 100%; /* Gombok szélessége igazodjon a grid elemhez */
+}
+
+/* A gombok színének és animációjának változása, ha az egér fölöttük van */
+.exercise-buttons-container button:hover {
+    background-color: #0056b3; /* Sötétebb kék szín a kiemeléshez */
+    transform: scale(1.05); /* Kismértékű nagyítás az interakció érdekében */
+}
+
+/* Az üdvözlő szöveg stílusai */
+.welcome-container h1 {
+    color: #e1e1e1; /* Világos szöveg a sötét háttérhez */
+    font-size: 2rem; /* Alapértelmezett betűméret, amely jól látható telefonos nézetben is */
+}
+
+/* A kijelentkezés gomb stílusai */
+#logout-button {
+    background-color: #1e90ff; /* Világosabb kék háttérszín */
+    color: white; /* Fehér szöveg */
+    border: none; /* Nincs keret */
+    padding: 10px; /* Gomb belső tér */
+    cursor: pointer; /* Mutatóváltás az egérrel való rámutatáskor */
+    border-radius: 5px; /* Lekerekített sarkok */
+    transition: background-color 0.3s, transform 0.2s; /* Lassan változó háttérszín és kis nagyítás az interakció során */
+    font-size: 1rem; /* Alapértelmezett betűméret */
+}
+
+/* A kijelentkezés gomb színének és animációjának változása, ha az egér fölött van */
+#logout-button:hover {
+    background-color: #0056b3; /* Sötétebb kék szín a kiemeléshez */
+    transform: scale(1.05); /* Kismértékű nagyítás az interakció érdekében */
+}
+
+/* Közepes képernyő esetén a gombok elrendezése */
+@media (min-width: 600px) and (max-width: 799px) {
+    .exercise-buttons-container {
+        grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Három gomb egy sorban közepes képernyőn */
+    }
+}
+
+/* Maximum négy gomb legyen egy sorban a rendelkezésre álló helytől függően, de ne zsugorodjanak túl kicsire */
+@media (min-width: 800px) {
+    .exercise-buttons-container {
+        grid-template-columns: repeat(4, minmax(200px, 1fr)); /* Maximum négy gomb egy sorban széles képernyőn, a gombok nem zsugorodnak 200px alá */
+    }
+}
+
+/* Telefonos nézet stílusai */
+@media (max-width: 599px) {
+    .exercise-buttons-container {
+        grid-template-columns: repeat(1, minmax(200px, 1

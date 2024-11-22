@@ -1,0 +1,189 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    background-color: #212121;
+    color: #e6e6e6;
+}
+
+header {
+    background-color: #171717;
+    padding: 15px;
+    text-align: right;
+    border-bottom: 1px solid #4a4a4a;
+    width: calc(100% - 250px); /* A header szélességének beállítása, hogy a sidebar mellett érjen véget */
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+p {
+	text-color: #e6e6e6
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+    margin-top: 60px; /* Header magasság beállítása */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #171717;
+    padding: 15px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #3c3f41;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    color: #e6e6e6;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.sidebar button:hover {
+    background-color: #4b4e50;
+    transform: scale(1.02);
+}
+
+.sidebar details {
+    background-color: #3c3f41;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 12px;
+    color: #e6e6e6;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.sidebar details[open] {
+    background-color: #4b4e50;
+    transform: scale(1.02);
+}
+
+.sidebar summary {
+    outline: none;
+    cursor: pointer;
+}
+
+#content-selector {
+    width: 70%;
+    border-radius: 5px;
+    background-color: #3c3f41;
+    color: #e6e6e6;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#content-selector:hover {
+    background-color: #4b4e50;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 25px;
+    overflow-y: auto;
+    background-color: #1e1e1e;
+    margin-left: 250px; /* A content terület eltolása a sidebar szélességével */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.welcome-container {
+    text-align: center;
+}
+
+.exercise-buttons-container {
+    background-color: #444654; /* Sötét szín a gombok hátteréhez is, a ChatGPT stílusához illeszkedve */
+    padding: 20px; /* Belső tér az elem széleitől */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Árnyék a sziget hatás érdekében */
+    border-radius: 10px; /* Lekerekített sarkok */
+    text-align: center; /* Szöveg középre igazítása */
+    width: 100%; /* Szélesség az oldalhoz viszonyítva */
+    max-width: 1200px; /* Maximális szélesség */
+    display: grid; /* Grid elrendezés a gombokhoz */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* A gombok száma és mérete a képernyő méretétől függ, akár egy gomb is egymás alatt */
+    gap: 15px; /* A gombok közötti távolság */
+    margin: 40px auto; /* Távolság az üdvözlő szövegtől és középre igazítás */
+    box-sizing: border-box; /* A padding beszámítása a teljes méretbe */
+    scroll-margin-top: 60px; /* Margin a görgetéshez kisebb képernyőn */
+}
+
+.exercise-buttons-container button {
+    height: 120px; /* Négyzet alakú gombok */
+    background-color: #1e90ff; /* Világosabb kék szín, amely kiemelkedik a sötét háttérből */
+    color: white; /* Fehér szöveg */
+    border: none; /* Nincs keret */
+    cursor: pointer; /* Mutatóváltás az egérrel való rámutatáskor */
+    border-radius: 5px; /* Lekerekített sarkok */
+    /* transition: background-color 0.3s, transform 0.2s; /* Lassan változó háttérszín és kis nagyítás az interakció során */ */
+    font-size: 1rem; /* Alapértelmezett betűméret */
+    box-sizing: border-box; /* Padding beleszámítása a méretbe */
+    width: 100%; /* Gombok szélessége igazodjon a grid elemhez */
+}
+
+.exercise-buttons-container button:hover {
+    background-color: #0056b3; /* Sötétebb kék szín a kiemeléshez */
+    transform: scale(1.05); /* Kismértékű nagyítás az interakció érdekében */
+}
+
+button#logout-button {
+    background-color: #ff4c4c;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 5px;
+}
+
+button#logout-button:hover {
+    background-color: #e04343;
+    transform: scale(1.05);
+}
+
+/* Lenyíló menü stílus hozzáadása */
+.sidebar select#content-selector {
+    display: block;
+    width: 70%;
+    padding: 12px;
+    margin: 20px auto;
+    background-color: #3c3f41;
+    color: #e6e6e6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar select#content-selector:hover {
+    background-color: #4b4e50;
+}
+
+.sidebar select#content-selector option {
+    background-color: #3c3f41;
+    color: #e6e6e6;
+}
+
+.sidebar select#content-selector:focus {
+    outline: none;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üdvözöllek</title>
+    <link rel="stylesheet" href="css/welcome_styles.css">
+</head>
+<body class="welcome-page">
+    <header>
+        <button id="logout-button">Kijelentkezés</button>
+    </header>
+    <main>
+        <div class="sidebar">
+            <button id="exercise-1" onclick="loadContent('diak_feladat.html')">1. gyakorló</button>
+            <button id="exercise-2" onclick="loadContent('exercise2.html')">2. gyakorló</button>
+            <!-- További gombok ugyanígy -->
+        </div>
+        <div class="content" id="content-area">
+            
+        </div>
+    </main>
+    <script src="js/welcome.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felhasználói autentikáció</title>
+    <link rel="stylesheet" href="css/index_styles.css">
+</head>
+<body>
+    <div id="auth-container">
+        <h1>Felhasználói autentikáció</h1>
+        <p id="question">Regisztráltál már?</p>
+        <button id="yes-button">Igen</button>
+        <button id="no-button">Nem</button>
+        
+        <div id="login-form" style="display: none;">
+            <div class="form-box">
+                <h2>Bejelentkezés</h2>
+                <input type="text" id="username" placeholder="Felhasználónév">
+                <input type="password" id="password" placeholder="Jelszó">
+                <button id="login-button">Bejelentkezés</button>
+                <p>Még nincs fiókod? <button id="show-register-button">Regisztrálok</button></p>
+            </div>
+        </div>
+        
+        <div id="register-form" style="display: none;">
+            <div class="form-box">
+                <h2>Regisztráció</h2>
+                <input type="text" id="new-username" placeholder="Felhasználónév">
+                <input type="password" id="new-password" placeholder="Jelszó">
+                <button id="register-button">Regisztrálok</button>
+                <p>Már van fiókod? <button id="show-login-button">Bejelentkezés</button></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

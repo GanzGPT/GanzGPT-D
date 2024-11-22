@@ -1,0 +1,97 @@
+/* Általános stílusok */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Autentikációs oldal stílusai */
+#auth-container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.form-box {
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Üdvözlő oldal stílusai */
+body.welcome-page {
+    background-color: #87CEFA; /* Világos kék háttér */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    position: fixed; /* Módosítva absolute-ről fixed-re */
+    top: 10px;
+    right: 20px;
+    z-index: 1000; /* Biztosítja, hogy a header mindig előtérben legyen */
+}
+
+#welcome-container {
+    display: none;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.welcome-container {
+    background-color: #f9f9f9; /* Világos fehéres sziget */
+    padding: 50px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.welcome-container h1 {
+    color: #000000; /* Fekete ÜDVÖZÖLLEK felirat */
+}
+
+#logout-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#logout-button:hover {
+    background-color: #0056b3;
+}
