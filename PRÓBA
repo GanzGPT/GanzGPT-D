@@ -1,0 +1,106 @@
+# Spread Operátor (…) - Előadás Felépítése
+
+## 1. Bevezetés (5-10 perc)
+
+**Célok megfogalmazása:** Kezd az órát azzal, hogy ismerteted, mit tanulnak a diákok a spread operátorról. Pl.: 
+
+> "Ma a spread operátorral fogunk megismerkedni. Ez egy olyan eszköz, amely lehetővé teszi tömbök és objektumok elemeinek könnyű szétosztását, kombinálását vagy másolását. Ez egy egyszerű és hatékony módszer a JavaScriptben. A spread operátor használata nemcsak a kód írását teszi könnyebbé, de az olvashatóságot is jelentősen növeli, így a kód karbantartása is egyszerűbbé válik."
+
+**Előzetes ismeretek felidézése:** Kérdezd meg a diákokat, hallottak-e már a spread operátorról, vagy épp tömbökről és objektumokról. Ezzel felébreszted a meglévő tudásukat, és beágyazod az új tananyagot a korábbiakba. Emlékeztesd őket arra is, hogyan használták korábban a tömböket és objektumokat, például iterációval való kombinálásra vagy másolásra, és hogy ez mennyivel bonyolultabb lehetett. Kiemelheted, hogy a spread operátor leegyszerűsíti és elegánsabbá teszi a megoldásokat.
+
+## 2. Elméleti Alapok (15-20 perc)
+
+**Fogalom bevezetése:** Magyarázd el a spread operátort: 
+
+> "A spread operátor ( ... ) lehetővé teszi tömbök vagy objektumok elemeinek kibontását, és ezáltal könnyebbé válik azok kombinálása vagy másolása. A spread operátor használata gyors és egyszerű, és a kódunk átláthatóbb lesz általa. Ez különösen hasznos akkor, ha tömböket vagy objektumokat szeretnénk egyesíteni, vagy ha meg szeretnénk akadályozni az eredeti adatok módosítását."
+
+**Tulajdonságok és előnyök:** Mutasd be, hogy a spread operátor használatával hogyan kerülhető el a bonyolult másolási művelet:
+
+> "Korábban, ha egy tömböt másolni szerettünk volna, azt iterációval kellett volna megtennünk. Most a spread operátorral egyszerűen, szinte egyetlen sorban megtehetjük ezt. Ez nemcsak időt takarít meg, hanem a kódot is sokkal olvashatóbbá és könnyebben érthetővé teszi más fejlesztők számára is. Emellett biztosítja, hogy az eredeti adatok ne sérüljenek meg, hiszen új tömböt vagy objektumot hozunk létre ahelyett, hogy módosítanánk a meglévőt."
+
+**Példa:** Mutass egy egyszerű példát, és magyarázd el lépésről lépésre:
+
+```javascript
+// Eredeti tömb létrehozása
+const numbers = [1, 2, 3];
+
+// Új tömb létrehozása a spread operátor segítségével
+const newNumbers = [...numbers, 4, 5];
+
+// Eredmény kiírása a konzolra
+console.log(newNumbers); // [1, 2, 3, 4, 5]
+```
+
+Itt a `...numbers` segítségével kibontjuk a `numbers` tömb elemeit, és hozzáadunk még néhány új elemet.
+
+**Ellenpélda:** Mutasd be, hogyan lehetne ezt megoldani spread operátor nélkül, és miért nehézkesebb:
+
+```javascript
+// Eredeti tömb létrehozása
+const numbers = [1, 2, 3];
+
+// Új tömb létrehozása elemenkénti másolással
+const newNumbers = numbers.concat([4, 5]);
+
+// Eredmény kiírása a konzolra
+console.log(newNumbers); // [1, 2, 3, 4, 5]
+```
+
+A `concat` metódussal is össze lehet kapcsolni a tömböket, de a spread operátor sokkal egyszerűbb és áttekinthetőbb megoldást nyújt.
+
+**További példák:** Mutass be egy másik példát, ahol objektumokat kombinálsz a spread operátor segítségével:
+
+```javascript
+// Eredeti objektumok létrehozása
+const person = {name: 'Anna', age: 25};
+const contact = {email: 'anna@example.com'};
+
+// Új objektum létrehozása a spread operátor segítségével
+const fullProfile = {...person, ...contact};
+
+// Eredmény kiírása a konzolra
+console.log(fullProfile); // {name: 'Anna', age: 25, email: 'anna@example.com'}
+```
+
+## 3. Interaktív Gyakorlat (10-15 perc)
+
+**Közös kódolás:** Együtt hozzatok létre egy tömböt, és használjátok a spread operátort másolásra vagy kombinálásra.
+
+**Példa:**
+
+```javascript
+// Eredeti objektumok létrehozása
+const obj1 = {a: 1, b: 2};
+const obj2 = {c: 3, d: 4};
+
+// Új objektum létrehozása az eredeti objektumok kombinálásával
+const combinedObj = {...obj1, ...obj2};
+
+// Eredmény kiírása a konzolra
+console.log(combinedObj); // {a: 1, b: 2, c: 3, d: 4}
+```
+
+Beszélj arról, hogy mi történik, ha az objektumoknak azonos kulcsai vannak: a későbbi objektum értékei felülírják a korábbiakat.
+
+**Kérdések feltevése:** Kérd meg a diákokat, hogy használják maguk is a spread operátort egy új tömb összeállítására.
+
+## 4. Önálló Gyakorlat (15-20 perc)
+
+**Feladatok kiadása:** Adj gyakorlati feladatot:
+
+- Hozzatok létre két tömböt, majd kombináljátok őket egy új tömbbe a spread operátor segítségével.
+- Készíts egy objektumot, amely két másik objektum kombinálásából jön létre.
+
+## 5. Összegzés és Kérdések (5-10 perc)
+
+**Tanultak áttekintése:** Ismételd át a legfontosabbakat: 
+
+> "Ma megtanultuk, hogyan lehet a spread operátorral tömböket és objektumokat kibontani, kombinálni és másolni."
+
+**Kérdések:** Kérd meg a diákokat, hogy tegyék fel kérdéseiket, ha valami nem világos.
+
+## 6. Házi Feladat vagy Projekt (5 perc)
+
+**Feladat kiadása:** Adj otthoni feladatot: 
+
+> "Készíts egy JavaScript kódot, amely két tömböt kombinál és hozzáad egy harmadik tömböt az eredményhez a spread operátor segítségével."
